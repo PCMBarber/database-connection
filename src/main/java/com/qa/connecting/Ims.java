@@ -1,5 +1,7 @@
 package com.qa.connecting;
 
+import org.apache.log4j.Logger;
+
 import com.qa.connecting.dao.CustomerDao;
 import com.qa.connecting.dao.RemoteDatabaseConnection;
 import com.qa.connecting.model.Customer;
@@ -7,11 +9,18 @@ import com.qa.connecting.utils.Input;
 
 public class Ims {
 
+	public static final Logger LOGGER = Logger.getLogger(Ims.class);
+	
 	Input input = new Input();
 
 	public void start() {
-
-		System.out.println("Database username: ");
+		//TRACE
+		//DEBUG
+		//INFO
+		//WARN
+		//ERROR
+		//FATAL
+		LOGGER.info("Database username: ");
 		String user = input.getInput();
 		System.out.println("Database password: ");
 		String password = input.getInput();
